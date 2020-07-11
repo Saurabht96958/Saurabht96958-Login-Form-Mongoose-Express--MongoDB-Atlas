@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loin Form</h1>
+      <% if(data.length >0){ %>
+        <div class="alert alert-danger">
+        <%= data %>
+      </div>
+      <%  } %>
+      <form class="" action="/pages/login" method="post">
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" value="" class="form-control" placeholder="enter your registered email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" required placeholder="enter your password" value="">
+        </div>
+        <button type="submit" class="btn btn-success" name="button">Login</button>
+        <a href="/" class="btn btn-secondary">cancel</a>
+    </form>
+    </div>
+  </body>
+</html>
